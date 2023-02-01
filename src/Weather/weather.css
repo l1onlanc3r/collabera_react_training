@@ -1,0 +1,130 @@
+.weather {
+    @apply flex flex-col items-center h-screen;
+  
+    &__container {
+      @apply m-auto;
+      width: 400px;
+    }
+
+    &__form {
+      @apply my-4;
+    }
+  }
+  
+  .search_form {
+    &__icon {
+      @apply absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none
+    }
+    &__label {
+      @apply mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white
+    }
+    &__input {
+      @apply block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+    }
+    &__btn {
+      @apply text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+    }
+  }
+  
+  .weatherCard{
+    width: 400px;
+    height: 200px;
+    font-family: 'Open Sans';
+    position: relative;
+
+    &__close {
+      @apply btn w-full mt-4 rounded-md
+    }
+  }
+  .currentTemp{
+    width: 220px;
+    height: 200px;
+    background: rgb(41, 41, 41);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .currentWeather{
+    width: 180px;
+    height: 200px;
+    background: rgb(237, 237, 237);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .temp{
+    font-size: 80px;
+    text-align: center;
+    display: block;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    padding: 20px 0 0;
+  }
+  .location{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 30px;
+    display: block;
+  }
+  .conditions{
+    font-size: 20px;
+    display: block;
+    padding: 20px 0 0;
+    text-align: center;
+
+  }
+  .conditions img{
+    margin: 0 auto 10px;
+  }
+  .info{
+    width: 180px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: rgb(42, 178, 234);
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .rain {
+    width: 50%;
+    position: absolute;
+    left: 10px;
+    word-spacing: 60px;
+    top: 3px;
+    padding-left:15px;
+    background-image: url('./humidity.png');
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .rain::before{
+    display: block;
+    /*content: '';*/
+    font-size: 40px;
+    left: 6px;
+    top: -4px;
+    position: absolute;
+  }
+  .wind {
+    width: 50%;
+    right: -10px;
+    position: absolute;
+    word-spacing: 60px;
+    top: 3px;
+    padding-left:15px;
+    background-image: url('./wind.png');
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+  .wind::before{
+    display: block;
+    content: '';
+    font-size: 25px;
+    left: -10px;
+    position: absolute;
+    top: 5px;
+  }

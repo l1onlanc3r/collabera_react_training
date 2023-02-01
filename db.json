@@ -10,5 +10,40 @@
       "isDone": false,
       "id": 3
     }
+  ],
+  "weather": [{
+    "city": "Manila",
+    "temp_c": 28,
+    "temp_f": 48.2,
+    "condition": "Heavy rain at times",
+    "icon": "https://cdn.weatherapi.com/weather/64x64/day/305.png",
+    "wind_mph": 6.9,
+    "wind_kph": 11.2,
+    "wind_dir": "SW",
+    "humidity": 81,
+    "cloud": 20
+  },{
+    "city": "Makati",
+    "temp_c": 32,
+    "temp_f": 50.2,
+    "condition": "Clear",
+    "icon": "https://cdn.weatherapi.com/weather/64x64/day/113.png",
+    "wind_mph": 8,
+    "wind_kph": 13.2,
+    "wind_dir": "W",
+    "humidity": 90,
+    "cloud": 0
+  },{
+    "city": "Taguig",
+    "temp_c": 30,
+    "temp_f": 70,
+    "condition": "Partly Cloudy",
+    "icon": "https://cdn.weatherapi.com/weather/64x64/day/116.png",
+    "wind_mph": 3.9,
+    "wind_kph": 2.2,
+    "wind_dir": "N",
+    "humidity": 50,
+    "cloud": 10
+  }
   ]
 }
