@@ -13,7 +13,9 @@ module.exports = {
   plugins: ['react'],
   rules: {
     "react/state-in-constructor": 0,
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    "import/no-extraneous-dependencies": 0,
+    "jsx-a11y/label-has-associated-control": 0
   },
 };
 

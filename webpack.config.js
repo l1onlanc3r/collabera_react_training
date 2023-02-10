@@ -3,10 +3,11 @@ const path = require('path');
 
 // old javascript way
 module.exports = {
-  entry: './MyTodo/index.jsx',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'bundle'),
     filename: 'final.js',
+    publicPath: '/' // nested routing 
   },
   mode: 'development',
   module: {
@@ -36,5 +37,6 @@ module.exports = {
     compress: true,
     port: 8080,
     open: true,
+    historyApiFallback: true, // routing
   },
 };
