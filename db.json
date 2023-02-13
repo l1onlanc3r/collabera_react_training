@@ -48,17 +48,6 @@
   ],
   "users": [
     {
-      "email": "lionlancer@gmail.coms",
-      "password": "$2a$10$BJQ32M0W4eSW.ZIjEvS3K.Plw95vZo4RSX4qJ25LUk/NYJ7kwQ5m6",
-      "name": "Sherwina",
-      "gender": "female",
-      "hobbies": [
-        "football",
-        "volleyball"
-      ],
-      "id": 2
-    },
-    {
       "email": "lionlancer@gmail.com",
       "password": "$2a$10$27mPxPobUS2xHXf83dWsuOwpkZNp0ydjd7LpMgN5eaNmpyuqYm8XC",
       "name": "Sherwin",
@@ -68,6 +57,29 @@
         "volleyball"
       ],
       "id": 1
+    },
+    {
+      "email": "qwe@123.asd",
+      "password": "$2a$10$d.0.bgKcfCuRkIU.C6QmmOXqc27hmQ94fD0S38U/bcUr9YvLefVw6",
+      "name": "zxczxc",
+      "gender": "male",
+      "hobbies": [
+        "football",
+        "volleyball"
+      ],
+      "confirmPassword": "qweqweqwe",
+      "id": 3
+    },
+    {
+      "email": "lionlancer@gmail.coms",
+      "password": "$2a$10$x.kBOxlui9FNUNzEcjv5fe1ydBGDaVaPvYYEvzSOEaD7DQ6/S3PHi",
+      "name": "Sherwina",
+      "gender": "female",
+      "hobbies": [
+        "football",
+        "volleyball"
+      ],
+      "id": 2
     }
   ],
   "products": [
@@ -312,5 +324,16 @@
       }
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "productId": 6,
+      "quantity": 3,
+      "id": 1
+    },
+    {
+      "productId": 7,
+      "quantity": 1,
+      "id": 2
+    }
+  ]
 }

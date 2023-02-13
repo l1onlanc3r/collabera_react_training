@@ -1,41 +1,9 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import CustomForm from '../../components/CustomForm';
-import { useAuthContext } from '../../contexts/authContext';
-import { registerFields, registerInitialValues } from './registerFields';
+import { connect } from 'react-redux';
+import { registerAction } from '../../actions/authActions';
+import Register from './page';
 
-function Register() {
-  const navigate = useNavigate();
+const mapDispatchToProps = (dispatch) => ({
+  register: (values, actions) => registerAction(values, actions)(dispatch),
+});
 
-  const goToLogin = () => {
-    navigate('/auth', {
-      replace: true,
-      // state: {
-      //  user: {
-      //    name: 'Sherwin',
-      //    age: 30,
-      //   gender: 'male',
-      // },
-      // },
-    });
-  };
-
-  const { register } = useAuthContext();
-
-  return (
-    <>
-      <button type="button" onClick={goToLogin}>
-        Go Back
-      </button>
-
-      <CustomForm
-        initialValues={registerInitialValues}
-        onSubmit={register}
-        fields={registerFields}
-        btnText="Sign Up"
-      />
-    </>
-  );
-}
-
-export default Register;
+export default connect(null, mapDispatchToProps)(Register);

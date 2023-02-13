@@ -1,43 +1,18 @@
-import React, { useCallback, useEffect, useMemo } from 'react';
-import { useProductContext } from '../../contexts/productContext';
-import { useCartContext } from '../../contexts/cartContext';
-import Product from '../../components/Product';
+import { connect } from 'react-redux';
+import { loadCartAction } from '../../actions/cartActions';
+import { loadProductsAction } from '../../actions/productsActions';
+import Dashboard from './page';
 
-function Dashboard() {
-  // const { logout, user } = useAuthContext();
-  const { products, loadProducts, error } = useProductContext();
-  const { cart, loadCart } = useCartContext();
+const mapStateToProps = ({ products, loading }) => ({
+  products,
+  loading: loading.some(
+    (x) => x.action === 'LOAD_PRODUCTS' || x.action === 'LOAD_CART',
+  ),
+});
 
-  const loadData = useCallback(async () => {
-    await Promise.all([loadCart(), loadProducts()]);
-  }, [loadProducts, loadCart]);
+const mapDispatchToProps = (dispatch) => ({
+  loadProducts: () => loadProductsAction()(dispatch),
+  loadCart: () => loadCartAction()(dispatch),
+});
 
-  useEffect(() => {
-    loadData();
-  }, []);
-
-  if (error) {
-    return (
-      <div className="text-red-500 text-center font-medium w-full p-4">
-        {error}
-      </div>
-    );
-  }
-
-  //  const getCartItem = (product) =>
-  // useMemo(
-  // () =>
-
-  // [cart, product],
-  // );
-
-  return (
-    <div>
-      {products.map((product) => (
-        <Product key={product.id} product={product} />
-      ))}
-    </div>
-  );
-}
-
-export default Dashboard;
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

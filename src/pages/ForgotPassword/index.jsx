@@ -1,22 +1,9 @@
-import React from 'react';
-import { passwordFields, passwordInitialValues } from './forgotPasswordFields';
-import CustomForm from '../../components/CustomForm';
-import { useAuthContext } from '../../contexts/authContext';
+import { connect } from 'react-redux';
+import { updatepassAction } from '../../actions/authActions';
+import ForgotPass from './page';
 
-function Login() {
-  // const navigate = useNavigate();
+const mapDispatchToProps = (dispatch) => ({
+  updatepass: (values, actions) => updatepassAction(values, actions)(dispatch),
+});
 
-  const { updatepass, userState } = useAuthContext();
-
-  return (
-    <CustomForm
-      initialValues={passwordInitialValues}
-      onSubmit={updatepass}
-      fields={passwordFields}
-      state={userState}
-      btnText="Change Password"
-    />
-  );
-}
-
-export default Login;
+export default connect(null, mapDispatchToProps)(ForgotPass);

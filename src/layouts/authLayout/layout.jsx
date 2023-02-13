@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link, Navigate, Outlet } from 'react-router-dom';
-import { useAuthContext } from '../contexts/authContext';
+import PropTypes from 'prop-types';
 
-function AuthLayout() {
-  const { userState } = useAuthContext();
+function AuthLayout({ user }) {
+  // const { userState } = useAuthContext();
 
-  if (userState.user) {
+  if (user) {
     // redirect
     return <Navigate to="/dashboard" replace />;
   }
@@ -37,5 +37,13 @@ function AuthLayout() {
     </div>
   );
 }
+
+AuthLayout.propTypes = {
+  user: PropTypes.shape({}),
+};
+
+AuthLayout.defaultProps = {
+  user: null,
+};
 
 export default AuthLayout;
