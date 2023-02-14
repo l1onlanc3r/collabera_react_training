@@ -324,16 +324,6 @@
       }
     }
   ],
-  "cart": [
-    {
-      "productId": 6,
-      "quantity": 3,
-      "id": 1
-    },
-    {
-      "productId": 7,
-      "quantity": 1,
-      "id": 2
-    }
-  ]
+  "cart": [],
+  "errors": []
 }

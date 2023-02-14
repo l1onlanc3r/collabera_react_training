@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { loadCartAction } from '../../actions/cartActions';
-import { loadProductsAction } from '../../actions/productsActions';
+// import { loadCartAction } from '../../actions/cartActions';
+// import { loadProductsAction } from '../../actions/productsActions';
 import Dashboard from './page';
 
 const mapStateToProps = ({ products, loading }) => ({
@@ -11,8 +11,24 @@ const mapStateToProps = ({ products, loading }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loadProducts: () => loadProductsAction()(dispatch),
-  loadCart: () => loadCartAction()(dispatch),
+  loadProducts: () =>
+    dispatch({
+      type: 'LOAD_PRODUCTS_REQUEST',
+      payload: {
+        url: '660/products',
+        method: 'get',
+      },
+      meta: { loadingId: -1 },
+    }), // loadProductsAction()(dispatch),
+  loadCart: () =>
+    dispatch({
+      type: 'LOAD_CART_REQUEST',
+      payload: {
+        url: '660/cart',
+        method: 'get',
+      },
+      meta: { loadingId: -1 },
+    }), // loadCartAction()(dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);

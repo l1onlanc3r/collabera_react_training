@@ -12,7 +12,12 @@ const mapStateToProps = ({ cart, products, loading }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  deleteCartItem: (data) => deleteCartItemAction(data)(dispatch),
+  deleteCartItem: (payload) =>
+    dispatch({
+      type: 'DELETE_CART_REQUEST',
+      payload,
+      meta: { loadingId: payload.productId },
+    }), // (data) => deleteCartItemAction(data)(dispatch),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Checkout);

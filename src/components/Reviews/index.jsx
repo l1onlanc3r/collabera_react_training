@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { StarIcon } from '@heroicons/react/20/solid';
 
 function Reviews({ rate, count }) {
-  console.log('reviews render');
+  // console.log('reviews render');
   return (
     <div className="mt-6">
       <h4 className="sr-only">Reviews</h4>

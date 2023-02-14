@@ -34,7 +34,7 @@ function Product({
   // console.log('cartItem: ', cartItem);
   // console.log('product: ', product);
   // console.log('loading: ', loading);
-  console.log('product render');
+  // console.log('product render');
 
   return (
     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 grid w-full grid-cols-1 items-start gap-y-8 gap-x-6 sm:grid-cols-12 lg:gap-x-8 my-10">
