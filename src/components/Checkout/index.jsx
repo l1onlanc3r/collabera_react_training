@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { deleteCartItemAction } from '../../actions/cartActions';
+// import { deleteCartItemAction } from '../../actions/cartActions';
 import Checkout from './component';
 
 const mapStateToProps = ({ cart, products, loading }) => ({

@@ -5,7 +5,7 @@ function* apiGenerator({ type, payload, meta }) {
   const match = /(.*)_(REQUEST)/.exec(type);
   const [, actionName] = match;
 
-  console.log('aciotnName: ', actionName);
+  // console.log('aciotnName: ', actionName);
   try {
     const res = yield call(axiosInstance, payload);
     yield put({
@@ -14,7 +14,22 @@ function* apiGenerator({ type, payload, meta }) {
       meta,
     });
   } catch (error) {
-    yield put({ actionName: `${actionName}_FAIL`, payload: error, meta });
+    yield put({
+      type: `${actionName}_FAIL`,
+      payload: {
+        message: error.message,
+        title: `${actionName
+          .split('_')
+          .map((x, i) => {
+            if (i === 0) {
+              return `${x[0].toUpperCase()}${x.slice(1).toLocaleLowerCase()}`;
+            }
+            return x.toLocaleLowerCase();
+          })
+          .join(' ')} fail`,
+      },
+      meta,
+    });
   }
 }
 

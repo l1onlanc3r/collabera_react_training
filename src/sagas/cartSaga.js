@@ -1,5 +1,5 @@
-import { all } from 'axios';
 import {
+  all,
   // call,
   fork,
   // put,
@@ -65,7 +65,7 @@ function* deleteCartRequest() {
   yield takeLeading('DELETE_CART_REQUEST', apiGenerator);
 }
 
-export default function* rootCartSaga() {
+export default function* cartSaga() {
   yield all([
     fork(loadCartRequest),
     fork(addCartRequest),

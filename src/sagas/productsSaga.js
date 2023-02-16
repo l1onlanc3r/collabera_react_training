@@ -1,5 +1,4 @@
-import { all } from 'axios';
-import { fork, takeEvery } from 'redux-saga/effects';
+import { all, fork, takeEvery } from 'redux-saga/effects';
 import apiGenerator from '../utils/apiGenerator';
 // import axiosInstance from '../utils/axiosInstance';
 
@@ -18,6 +17,6 @@ function* loadProductsRequest() {
   yield takeEvery('LOAD_PRODUCTS_REQUEST', apiGenerator);
 }
 
-export default function* rootProductsSaga() {
+export default function* productsSaga() {
   yield all([fork(loadProductsRequest)]);
 }

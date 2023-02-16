@@ -1,10 +1,10 @@
 export const cartInitialValue = [];
 
 export default (state = cartInitialValue, { type, payload }) => {
-  console.log('CART REDUCER:');
-  console.log('state:', state);
-  console.log('type:', type);
-  console.log('payload:', payload);
+  // console.log('CART REDUCER:');
+  // console.log('state:', state);
+  // console.log('type:', type);
+  // console.log('payload:', payload);
 
   switch (type) {
     case 'LOAD_CART_SUCCESS':

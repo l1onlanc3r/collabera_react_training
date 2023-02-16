@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 // import { useCartContext } from '../../contexts/cartContext';
 // import { useLoadingContext } from '../../contexts/loadingContext';
 import Reviews from '../Reviews';
+import { currency } from '../../utils';
 
 function Product({
   product,
@@ -53,7 +54,9 @@ function Product({
         <section aria-labelledby="information-heading" className="mt-2">
           <h3 id="information-heading">{product.description}</h3>
 
-          <p className="text-2xl text-gray-900">{product.price}</p>
+          <p data-testid="price" className="text-2xl text-gray-900">
+            {currency(product.price)}
+          </p>
 
           {/* Reviews */}
           <Reviews {...product.rating} />

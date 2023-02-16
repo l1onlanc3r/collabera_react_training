@@ -11,8 +11,8 @@ export default (state = loadingInitialState, { type, meta }) => {
   if (!match) return state;
 
   const [, actionType, actionName] = match;
-  console.log(actionType);
-  console.log(actionName);
+  // console.log(actionType);
+  // console.log(actionName);
 
   if (actionName === 'REQUEST') {
     // update action status

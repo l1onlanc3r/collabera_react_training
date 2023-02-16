@@ -3,9 +3,12 @@ import { connect } from 'react-redux';
 // import { loadProductsAction } from '../../actions/productsActions';
 import Dashboard from './page';
 
-const mapStateToProps = ({ products, loading }) => ({
+const mapStateToProps = ({ products, loading, errors }) => ({
   products,
   loading: loading.some(
+    (x) => x.action === 'LOAD_PRODUCTS' || x.action === 'LOAD_CART',
+  ),
+  hasError: errors.some(
     (x) => x.action === 'LOAD_PRODUCTS' || x.action === 'LOAD_CART',
   ),
 });

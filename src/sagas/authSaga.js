@@ -56,6 +56,6 @@ function* registerRequest() {
   yield takeLatest('REGISTER_REQUEST', register);
 }
 
-export default function* rootAuthSaga() {
+export default function* authSaga() {
   yield all([fork(loginRequest), fork(registerRequest)]);
 }

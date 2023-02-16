@@ -324,6 +324,157 @@
       }
     }
   ],
-  "cart": [],
-  "errors": []
+  "cart": [
+    {
+      "productId": 1,
+      "quantity": 2,
+      "id": 1
+    },
+    {
+      "productId": 2,
+      "quantity": 1,
+      "id": 2
+    },
+    {
+      "productId": 3,
+      "quantity": 6,
+      "id": 3
+    },
+    {
+      "productId": 4,
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "productId": 5,
+      "quantity": 6,
+      "id": 5
+    },
+    {
+      "productId": 8,
+      "quantity": 12,
+      "id": 6
+    },
+    {
+      "productId": 13,
+      "quantity": 1,
+      "id": 7
+    }
+  ],
+  "errors": [
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_PRODUCTS_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:43:12.244Z",
+      "id": 1
+    },
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_CART_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:43:12.297Z",
+      "id": 2
+    },
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_PRODUCTS_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:44:18.383Z",
+      "id": 3
+    },
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_CART_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:44:18.387Z",
+      "id": 4
+    },
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_PRODUCTS_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:48:08.483Z",
+      "id": 5
+    },
+    {
+      "user": {
+        "email": "lionlancer@gmail.coms",
+        "name": "Sherwina",
+        "gender": "female",
+        "hobbies": [
+          "football",
+          "volleyball"
+        ],
+        "id": 2
+      },
+      "type": "LOAD_CART_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-14T23:48:08.503Z",
+      "id": 6
+    }
+  ]
 }

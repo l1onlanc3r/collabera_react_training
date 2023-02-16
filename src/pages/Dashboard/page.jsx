@@ -2,7 +2,7 @@ import React, { useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Product from '../../components/Product';
 
-function Dashboard({ products, loading, loadProducts, loadCart }) {
+function Dashboard({ products, loading, loadProducts, loadCart, hasError }) {
   const loadData = useCallback(async () => {
     await Promise.all([loadProducts(), loadCart()]);
   }, [loadProducts, loadCart]);
@@ -12,11 +12,15 @@ function Dashboard({ products, loading, loadProducts, loadCart }) {
   }, [loadData]);
 
   if (loading) {
-    return <h1>Loading...</h1>;
+    return <h1 data-testid="loading">Loading...</h1>;
+  }
+
+  if (hasError) {
+    return <h1 data-testid="error">Something went wrong...</h1>;
   }
 
   return (
-    <div>
+    <div data-testid="products-list">
       {products.map((product) => (
         <Product key={product.id} product={product} />
       ))}
@@ -29,6 +33,7 @@ Dashboard.propTypes = {
   loading: PropTypes.bool.isRequired,
   loadProducts: PropTypes.func.isRequired,
   loadCart: PropTypes.func.isRequired,
+  hasError: PropTypes.bool.isRequired,
 };
 
 export default Dashboard;
