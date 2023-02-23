@@ -72,7 +72,7 @@
     },
     {
       "email": "lionlancer@gmail.coms",
-      "password": "$2a$10$x.kBOxlui9FNUNzEcjv5fe1ydBGDaVaPvYYEvzSOEaD7DQ6/S3PHi",
+      "password": "$2a$10$UVUz7K3APFPl4jxQr0LC1.nvvJP8/w4luGdXPjdC6UqaGMlGm1qze",
       "name": "Sherwina",
       "gender": "female",
       "hobbies": [
@@ -80,6 +80,19 @@
         "volleyball"
       ],
       "id": 2
+    },
+    {
+      "email": "my@mail.coms",
+      "password": "$2a$10$U5D8fPpe94Sp7/pgyk.v9ur2KbkInxy4dmt0gaD/tzuwJ0gU27zvW",
+      "name": "Sherwin",
+      "gender": "male",
+      "hobbies": [
+        "volleyball",
+        "basketball",
+        "football"
+      ],
+      "confirmPassword": "123123123",
+      "id": 4
     }
   ],
   "products": [
@@ -470,6 +483,68 @@
       },
       "createdAt": "2023-02-14T23:48:08.503Z",
       "id": 6
+    },
+    {
+      "user": null,
+      "type": "UPDATE_PASS_FAIL",
+      "payload": {},
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-23T09:30:25.760Z",
+      "id": 7
+    },
+    {
+      "user": null,
+      "type": "UPDATE_PASS_FAIL",
+      "payload": {
+        "message": "values is not defined",
+        "title": "Update pass fail"
+      },
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-23T09:36:14.521Z",
+      "id": 8
+    },
+    {
+      "user": null,
+      "type": "UPDATE_PASS_FAIL",
+      "payload": {
+        "message": "Email already exists",
+        "title": "Update pass fail"
+      },
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-23T09:52:16.373Z",
+      "id": 9
+    },
+    {
+      "user": null,
+      "type": "LOGIN_FAIL",
+      "payload": {
+        "message": "Incorrect password",
+        "title": "Login fail"
+      },
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-23T10:00:40.488Z",
+      "id": 10
+    },
+    {
+      "user": null,
+      "type": "REGISTER_FAIL",
+      "payload": {
+        "message": "Cannot read properties of undefined (reading 'method')",
+        "title": "Register fail"
+      },
+      "meta": {
+        "loadingId": -1
+      },
+      "createdAt": "2023-02-23T10:02:48.758Z",
+      "id": 11
     }
   ]
 }

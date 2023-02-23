@@ -19,6 +19,11 @@ export default (state = initialState, { type, payload }) => {
       return initialState;
     }
 
+    case 'UPDATE_USER_SUCCESS': {
+      window.location.href = '/auth';
+      return state;
+    }
+
     case 'LOGOUT':
       localStorage.clear();
       return initialState;

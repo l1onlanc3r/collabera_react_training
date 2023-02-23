@@ -23,9 +23,7 @@ export const passwordFields = [
     id: 'password',
     type: 'password',
     'data-value': '',
-    // autoComplete: '',
     label: 'New Password',
-    // className: 'rounded-t-md',
     validate: (value) => {
       if (!value) {
         return 'Required...';
